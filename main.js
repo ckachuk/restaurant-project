@@ -1,1 +1,1 @@
-alert("this is running");
+(()=>{"use strict";const t={domManagament:{domButton:function(t,n){const e=document.createElement("button");return e.id=`${t}`,e.innerHTML=`${n}`,{button:e}}}},n=document.getElementById("content"),e=t.domButton("asd","hi");n.appendChild(e)})();
