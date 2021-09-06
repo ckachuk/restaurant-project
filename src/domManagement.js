@@ -12,6 +12,14 @@ const domManagament = (function(){
         return button;
     }
 
+    const domParagraph = function(nameID, content){
+        const paragraph = document.createElement('p');
+        paragraph.id = nameID;
+        paragraph.innerHTML = content;
+
+        return paragraph;
+    }
+
 
     const domImage = function(nameID, srcImage){
         const img = document.createElement('img');
@@ -23,7 +31,8 @@ const domManagament = (function(){
     }
     return{
         domButton,
-        domImage
+        domImage,
+        domParagraph
     }
 })();
 

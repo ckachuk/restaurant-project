@@ -13,15 +13,9 @@ const contact = (function(){
         const contact = document.createElement('div')
         contact.id = 'contentContact';
 
-        const addressP = document.createElement('p');
-        addressP.innerHTML = contactData.address;
-
-        const countryP = document.createElement('p');
-        countryP.innerHTML = contactData.country;
-
-        const phoneP = document.createElement('p');
-        phoneP.innerHTML = contactData.phone;
-
+        const addressP = domManagament.domParagraph('addressP', contactData.address);
+        const countryP = domManagament.domParagraph('countryP', contactData.country);
+        const phoneP = domManagament.domParagraph('phoneP', contactData.phone);
         const imgRestaurant = domManagament.domImage('imgRestaurant', contactData.imgSrc);
 
         contact.appendChild(addressP);
