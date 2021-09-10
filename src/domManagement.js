@@ -20,6 +20,21 @@ const domManagament = (function(){
         return paragraph;
     }
 
+    const domH1 = function(nameID, content){
+        const heading1 = document.createElement('h1');
+        heading1.id = nameID;
+        heading1.innerHTML = content;
+
+        return heading1;
+    }
+
+    const domH2 = function(nameID, content){
+        const heading2 = document.createElement('h2');
+        heading2.id = nameID;
+        heading2.innerHTML = content;
+
+        return heading2;
+    }
 
     const domImage = function(nameID, srcImage){
         const img = document.createElement('img');
@@ -29,10 +44,23 @@ const domManagament = (function(){
 
         return img;
     }
+
+    const domAnchor = function(nameID, content, hrefPage){
+        const anchor = document.createElement('a');
+
+        anchor.id = nameID;
+        anchor.href = hrefPage;
+        anchor.innerHTML = content;
+
+        return anchor;
+    }
     return{
         domButton,
         domImage,
-        domParagraph
+        domParagraph,
+        domH1,
+        domH2,
+        domAnchor,
     }
 })();
 

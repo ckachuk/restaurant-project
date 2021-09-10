@@ -1,0 +1,198 @@
+:root{
+    --color1: #d8c1d7;
+    --color2: #e0d9cb;
+    --color3: #0f0f0e;
+    --color4: #e2e2e2;
+    --color5: #f8f8f8;
+}
+
+.content{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: var(--color5);
+    
+}
+
+.content > * {
+    flex: 1 100%;
+}
+  
+
+body{
+    background-color: var(--color5);
+    color: var(--color3);
+    font-family: 'Kaisei Tokumin', serif;
+}
+
+button{
+    background-color: var(--color5); 
+    border: none;
+    color: var(--color3);
+    padding: 15px 32px;
+    margin-bottom: 50px;
+    max-height:200px ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-bottom: 4px solid var(--color4);
+    transition-duration: 0.4s;
+    font-family: 'Kaisei Tokumin', serif;
+}
+
+button:hover{
+    background-color: var(--color3);
+    color: var(--color5);
+}
+
+
+
+.header{
+    display: flex;
+    flex-flow: row wrap;
+    order: 1;
+}
+
+.header #titlePage{
+    flex: 1 100%;
+    margin: 50px;
+}
+
+.headerButtons{
+    flex: 3;
+    justify-content: center;
+}
+
+#imgOptionMenu{
+    max-width: 400px;
+    max-height: 400px;
+    border-radius: 10px;
+}
+
+#imgRestaurantContact{
+    max-width: 700px;
+    max-height: 700px;
+}
+
+#imgRestaurantHome{
+    max-width: 600px;
+    max-height: 600px;
+}
+
+
+.menuDiv{
+    padding: 40px 40% 4% 40%;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+    order: 2;
+}
+
+.homeDiv{
+    padding: 40px 40% 4% 40%;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+     -ms-animation: fadein 2s; /* Internet Explorer */
+      -o-animation: fadein 2s; /* Opera < 12.1 */
+         animation: fadein 2s;
+    order: 2;
+}
+
+.contactDiv{
+    padding: 40px 35% 11% 35%;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+      -o-animation: fadein 2s; /* Opera < 12.1 */
+         animation: fadein 2s;
+    order: 2;
+}
+
+
+.menuOptions{
+    background-color: rgba(226, 226, 226, 0.1);
+    border: 1px solid var(--color4);
+    padding: 50px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#tOption{
+    border-bottom: 4px solid var(--color3);
+}
+
+
+.footer{
+    display: flex;
+    justify-content:flex-end;
+    order: 3;
+    background-color: rgba(226, 226, 226, 0.6);
+    height: 80px;
+    border-top: 4px solid var(--color3);
+}
+
+a{
+    margin: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--color3);
+}
+
+a:hover{
+    border-bottom: 4px solid var(--color3);
+    -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1.5s; /* Firefox < 16 */
+      -o-animation: fadein 1.5s; /* Opera < 12.1 */
+         animation: fadein 1.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@media all and (max-width: 800px) {
+    .menuDiv{
+        padding: 10px;
+    }
+
+    .homeDiv{
+        padding: 10px;
+    }
+
+    .contactDiv{
+        padding: 10px;
+    }
+    
+    #imgRestaurantContact{
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    #imgOptionMenu{
+        max-width: 300px;
+        max-height: 300px;
+        border-radius: 10px;
+    }
+
+  }

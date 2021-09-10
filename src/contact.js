@@ -11,12 +11,12 @@ const contact = (function(){
 
     const renderContact = function(){
         const contact = document.createElement('div')
-        contact.id = 'contentContact';
+        contact.className = 'contactContent';
 
         const addressP = domManagament.domParagraph('addressP', contactData.address);
         const countryP = domManagament.domParagraph('countryP', contactData.country);
         const phoneP = domManagament.domParagraph('phoneP', contactData.phone);
-        const imgRestaurant = domManagament.domImage('imgRestaurant', contactData.imgSrc);
+        const imgRestaurant = domManagament.domImage('imgRestaurantContact', contactData.imgSrc);
 
         contact.appendChild(addressP);
         contact.appendChild(countryP);
@@ -30,7 +30,11 @@ const contact = (function(){
 
     const loadContact = function(){
         const contactDiv = document.createElement('div');
-        contactDiv.id = 'contactDiv';
+        contactDiv.className = 'contactDiv';
+
+        const contactH1 = domManagament.domH1('contactH1', 'CONTACT');
+
+        contactDiv.appendChild(contactH1);
         
         contactDiv.appendChild(renderContact());
 
